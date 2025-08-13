@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Pedido de Namoro</title>
+
+    <style>
+        #conteudo {
+            background: #d9aeff;
+            width: 60%;
+            height: 60%;
+            position: fixed;
+            top: 20%;
+            left: 20%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteudo">
+        <h2>
+            Oi amor! Decidi te fazer essa surpresa e gastei alguns neurônios para isso hehe.
+            Eu tinha programado isso mais pra frente, mas como você disse que não pedi adequadamente, "cá" estou eu para pedir formalmente.
+            Passar os dias ao seu lado me faz feliz e tranquilo, acho que nunca me senti tão bem assim.
+        </h2>
+
+        <h1>Por isso, gostaria de saber: você quer namorar comigo?</h1>
+
+        <button onclick="sim()">SIM</button>
+        <button onmouseover="desvia(this)">NÃO</button>
+    </div>
+
+    <script>
+        function desvia(t) {
+            var btn = t;
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 95);
+            btn.style.left = geraPosicao(0, 94);
+        }
+
+        function sim() {
+            window.location.href = "https://music.youtube.com/playlist?list=PLSVAohX1LOr1syh3weNT-mNCwQc7xZuet";
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
+</body>
+</html>
